@@ -1,0 +1,58 @@
+/* Required for full background image */
+
+html,
+body,
+header,
+.view {
+  min-height: 100vh;
+}
+
+.view-course {
+  min-height: 50vh;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 100vh;
+  }
+}
+
+.top-nav-collapse {
+  background-color:  #ab47bc !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #ab47bc !important
+  }
+}
+
+header {
+  position: relative;
+  height: 300px;
+  background-image: linear-gradient(#9b0cb4, #e07be0);
+}
+
+h1 {
+  padding: 100px 0;
+  font: 44px "Arial";
+  text-align: center;
+}
+
+header h1 {
+  color: white;
+}
+
+svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+}
