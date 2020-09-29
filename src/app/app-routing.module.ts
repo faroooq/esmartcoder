@@ -6,17 +6,12 @@ import { HomeComponent } from './home/home.component';
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-  {
-    path: 'home',
     component: HomeComponent,
     canActivate: [SeoGuard],
     data: {
-      title: ['Esmartcoder'],
-      desc: 'Esmartcoder is an unique..',
-      keywords: 'Live Projects, Esmart Child, Trainings, Online Courses, Code Fixes..'
+      title: ['esmartcoder'],
+      desc: 'esmartcoder is an unique..',
+      keywords: 'Mobile, Web, Ecommerce, Online, Courses, Software, Corporate, Training'
     }
   },
   { path: "**", component: HomeComponent }

@@ -1,0 +1,108 @@
+/* Required for full background image */
+html,
+body,
+header,
+.view {
+  min-height: 100vh;
+}
+
+.view-course {
+  min-height: 50vh;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view-course {
+    min-height: 0vh;
+  }
+
+  .mobile-width {
+      width: 260px;
+  }
+
+  .block-content-on-mobile {
+      display: none;
+  }
+}
+
+header {
+  position: relative;
+  height: 300px;
+  background-image: linear-gradient(#9b0cb4, #e07be0);
+}
+
+h1 {
+  padding: 100px 0;
+  font: 44px "Arial";
+  text-align: center;
+}
+
+header h1 {
+  color: white;
+}
+
+svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+}
+
+// MEGA MENU
+
+.navbar .mega-dropdown {
+    position: static !important;
+  }
+
+  .navbar .dropdown-menu.mega-menu {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+  }
+
+  .navbar .dropdown-menu.mega-menu a {
+    padding: 0 0 0 0;
+  }
+
+  .navbar .dropdown-menu.mega-menu a.news-title-2 {
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    -webkit-transition: .2s;
+    transition: .2s;
+    color: #fff !important;
+  }
+
+  .navbar .dropdown-menu.mega-menu a.news-title-2:hover {
+    color: #d0d6e2 !important;
+  }
+
+  .navbar .dropdown-menu.mega-menu .sub-menu a.menu-item-2 {
+    color: #fff !important;
+  }
+
+  .navbar .dropdown-menu a {
+    color: #fff !important;
+}
+
+  .navbar .dropdown-menu.mega-menu .sub-menu a.menu-item-2:hover {
+    color: #fff !important;
+  }
+
+  .navbar .dropdown-menu.mega-menu .sub-title {
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .navbar .dropdown-menu.mega-menu .mt-sm {
+    margin-top: -3px;
+  }
+
+  .navbar .dropdown-menu.mega-menu .font-small {
+    font-size: 0.85rem;
+  }
+
+//   MEGA MENU END

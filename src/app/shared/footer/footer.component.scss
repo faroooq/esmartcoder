@@ -1,0 +1,15 @@
+
+.footer-banner {
+    background-color:  #ab47bc !important;
+  }
+  
+  .navbar:not(.footer-banner) {
+    background: transparent !important;
+  }
+  
+  @media (max-width: 991px) {
+    .navbar:not(.footer-banner) {
+      background: #ab47bc !important
+    }
+  }
+ 

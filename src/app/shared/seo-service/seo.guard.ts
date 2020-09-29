@@ -11,7 +11,7 @@ export class SeoGuard implements CanActivate {
 
         const description = route.params['desc'];
         this.seo
-            .setTitle(['Esmartcoder - Live Projects, Esmart Child, Trainings, Online Courses, Code Fixes..'])
+            .setTitle(['esmartcoder - Mobile, Web, Ecommerce, Online, Courses, Software, Corporate, Training'])
             .setDescription(description)
             .setKeywords(route.data['keywords']);
         return true;
