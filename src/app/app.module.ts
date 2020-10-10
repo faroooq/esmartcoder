@@ -8,12 +8,20 @@ import { isPlatformBrowser } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { HeaderComponent } from './shared/header/header.component';
+import { UpcomingCoursesComponent } from './upcoming-courses/upcoming-courses.component';
+import { SoftwareSolutionsComponent } from './software-solutions/software-solutions.component';
+import { MainCoursesComponent } from './main-courses/main-courses.component';
+import { CourseEnrollFormComponent } from './course-enroll-form/course-enroll-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    UpcomingCoursesComponent,
+    MainCoursesComponent,
+    SoftwareSolutionsComponent,
+    CourseEnrollFormComponent
   ],
   imports: [
     AppRoutingModule,

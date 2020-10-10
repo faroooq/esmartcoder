@@ -1,10 +1,7 @@
 /* Required for full background image */
 html,
 body,
-header,
-.view {
-  min-height: 100vh;
-}
+header
 
 .view-course {
   min-height: 50vh;
@@ -21,15 +18,10 @@ header,
   .mobile-width {
       width: 260px;
   }
-
-  .block-content-on-mobile {
-      display: none;
-  }
 }
 
 header {
   position: relative;
-  height: 300px;
   background-image: linear-gradient(#9b0cb4, #e07be0);
 }
 

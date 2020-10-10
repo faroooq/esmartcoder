@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FooterComponent } from './footer/footer.component';
 import { SafePipe } from './pipe/safe.pipe';
 import { ArraySortPipe } from './pipe/arraysort.pipe';
-import { AngularMaterialModule } from './material.module';
 import { SeoService } from './seo-service/seo.service';
 import { SeoGuard } from './seo-service/seo.guard';
 import { RequestCache } from './services/cache.service';
@@ -23,8 +22,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FlexLayoutModule,
-    AngularMaterialModule
+    FlexLayoutModule
   ],
   declarations: [
     FooterComponent,
@@ -48,7 +46,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ReactiveFormsModule,
     HttpClientModule,
     FlexLayoutModule,
-    AngularMaterialModule,
     RouterModule,
     FooterComponent,
     SafePipe,

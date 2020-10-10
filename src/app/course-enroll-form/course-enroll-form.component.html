@@ -1,0 +1,141 @@
+<app-header></app-header>
+<!-- Material form contact -->
+<section class="pb-3 pt-10 text-center container" style="padding-top: 100px;">
+
+    <div class="row">
+
+        <div class="col-lg-6 col-md-6 mb-3">
+            <!--Card-->
+            <mdb-card cascade="true" wider="true">
+
+                <div class="view view-cascade gradient-card-header peach-gradient">
+                    <h3 class="card-header-title">TEACHING GUIDELINES</h3>
+                    <p>WE DESIGNED OUR CLASSES INTERACTIVE AND FUN</p>
+                </div>
+                <mdb-card-body cascade="true" class="text-left">
+                    <hr>
+                    <!--Quotation-->
+                    <p>
+                        <mdb-icon fas icon="quote-left"></mdb-icon> &nbsp;
+                        Our sessions are interactive and concept learning.
+                    </p>
+                    <hr>
+                    <!--Quotation-->
+                    <p>
+                        <mdb-icon fas icon="quote-left"></mdb-icon> &nbsp;
+                        We use best tools & techniques available to make you understand the concept better.
+                    </p>
+                    <hr>
+                    <!--Quotation-->
+                    <p>
+                        <mdb-icon fas icon="quote-left"></mdb-icon> &nbsp;
+                        We make you write the code while teaching to get hands-on coding.
+                    </p>
+                    <!--Quotation-->
+                    <hr>
+                    <p>
+                        <mdb-icon fas icon="quote-left"></mdb-icon> &nbsp;
+                        You will feel learning with your Friend, more than a Teacher.
+                    </p>
+                    <!--Quotation-->
+                    <hr>
+                    <p>
+                        <mdb-icon fas icon="quote-left"></mdb-icon> &nbsp;
+                        It's our responsiblity to make you understand the concept better.
+                    </p>
+                    <!-- <hr> -->
+                    <a href="" class="orange-text d-flex flex-row-reverse">
+                        <h5 class="waves-effect p-2" mdbWavesEffect>Read more
+                            <mdb-icon fas icon="chevron-right"></mdb-icon>
+                        </h5>
+                    </a>
+
+                </mdb-card-body>
+                <!--/.Card content-->
+
+            </mdb-card>
+            <!--/.Card-->
+        </div>
+
+        <div class="col-lg-6 col-md-6 mb-2">
+            <!--Card-->
+            <mdb-card cascade="true">
+
+                <!--Card image-->
+                <div class="view view-cascade gradient-card-header purple-gradient">
+                    <h3 class="card-header-title">ENROLL COURSE</h3>
+                    <p>LOGIN / SIGN-IN NOT REQUIRED</p>
+                </div>
+                <!--/Card image-->
+
+                <mdb-card-body cascade="true" class="text-center">
+                    <!--Card content-->
+
+                    <!-- Default form register -->
+                    <form class="text-center form-padding" [formGroup]="exampleForm" novalidate (ngSubmit)="onSubmit(exampleForm.value)">
+
+                        <div class="form-row mb-4">
+                            <div class="col">
+                                <!-- First name -->
+                                <input type="text" id="firstName" class="form-control"
+                                    placeholder="First name" formControlName="firstName">
+                            </div>
+                            <div class="col">
+                                <!-- Last name -->
+                                <input type="text" id="lastName" class="form-control"
+                                    placeholder="Last name" formControlName="lastName">
+                            </div>
+                        </div>
+
+                        <!-- E-mail -->
+                        <input type="email" id="email" class="form-control mb-4"
+                            placeholder="E-mail" formControlName="email">
+
+                        <div class="form-row mb-2">
+                            <div class="col-4">
+                                <!-- First name -->
+                                <input type="text" id="countryCode" class="form-control"
+                                    placeholder="Country Code" aria-describedby="defaultRegisterFormPhoneHelpBlock"
+                                    formControlName="countryCode">
+                            </div>
+                            <div class="col-8">
+                                <!-- Last name -->
+                                <input type="text" id="phone" class="form-control"
+                                    placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock"
+                                    formControlName="phone">
+                            </div>
+                        </div>
+                        <small id="materialRegisterFormPhoneHelpBlock" class="form-text text-muted text-left">
+                            Ex: +91 &nbsp; 9000000000
+                        </small>
+
+                        <!-- Newsletter -->
+                        <div class="row">
+                            <div class="col-md-12 mx-auto d-flex mt-3">
+                                <mdb-checkbox>Subscribe to our newsletter</mdb-checkbox>
+                            </div>
+                        </div>
+
+                        <!-- Enroll button -->
+                        <!-- <button mdbBtn gradient="purple-gradient" block="true" class="my-4" type="submit">ENROLL NOW</button> -->
+                        <button class="mt-3 mb-3" mdbBtn type="button" gradient="purple" block="true" 
+                            type="submit" [disabled]="!exampleForm.valid" mdbWavesEffect>
+                            ENROLL NOW</button>
+                            <!-- Terms of service -->
+                        <p style="text-align: left;" class="text-muted mt-3">Note: Once you enrolled We will contact you for further details.
+                            <!-- <br> -->
+                            <a href="" target="_blank">Terms & Conditions</a>.
+                        </p>
+                        
+                    </form>
+                    <!-- Default form register -->
+                </mdb-card-body>
+                <!--/.Card content-->
+            </mdb-card>
+            <!--/.Card-->
+        </div>
+
+    </div>
+</section>
+<!-- Material form contact -->
+<app-footer></app-footer>
