@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-// import { FireDatabaseService } from '../database/fire-database.service';
 
 @Component({
   selector: 'app-course-enroll-form',
@@ -11,7 +10,6 @@ import { Router } from '@angular/router';
 export class CourseEnrollFormComponent implements OnInit {
 
   exampleForm: FormGroup;
-  avatarLink: string = "https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg";
 
   validation_messages = {
     'firstName': [
@@ -34,7 +32,6 @@ export class CourseEnrollFormComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    // public firebaseService: FireDatabaseService,
     private router: Router,
   ) { }
 
@@ -53,11 +50,12 @@ export class CourseEnrollFormComponent implements OnInit {
   }
 
   resetFields() {
-    this.avatarLink = "https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg";
     this.exampleForm = this.fb.group({
-      name: new FormControl('', Validators.required),
-      surname: new FormControl('', Validators.required),
-      age: new FormControl('', Validators.required),
+      firstName: new FormControl('', Validators.required),
+      lastName: new FormControl('', Validators.required),
+      email: new FormControl('', Validators.required),
+      countryCode: new FormControl('', Validators.required),
+      phone: new FormControl('', Validators.required),
     });
   }
 

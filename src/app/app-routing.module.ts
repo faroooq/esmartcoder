@@ -11,8 +11,8 @@ const appRoutes: Routes = [
     canActivate: [SeoGuard],
     data: {
       title: ['esmartcoder'],
-      desc: 'esmartcoder is an unique..',
-      keywords: 'Mobile, Web, Ecommerce, Online, Courses, Software, Corporate, Training'
+      desc: 'We are a team of software engineers with realtime experience in IT industry. We Love Teaching and Coding, more than that We Love to teach the students who are passionate about learning Technology.',
+      keywords: 'Online, Software, Training, Solutions, Mobile, Web, Courses, Projects, Coding, Kids'
     }
   },
   {

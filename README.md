@@ -24,6 +24,10 @@ firebase init
 3. N
 firebase deploy
 
+Google Sheets:
+===============
+https://medium.com/@bluesmike/how-i-implemented-angular8-googlesheets-crud-8883ac3cb6d8
+
 json-to-firestore:
 =================
 https://levelup.gitconnected.com/firebase-import-json-to-firestore-ed6a4adc2b57

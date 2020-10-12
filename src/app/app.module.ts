@@ -12,6 +12,8 @@ import { UpcomingCoursesComponent } from './upcoming-courses/upcoming-courses.co
 import { SoftwareSolutionsComponent } from './software-solutions/software-solutions.component';
 import { MainCoursesComponent } from './main-courses/main-courses.component';
 import { CourseEnrollFormComponent } from './course-enroll-form/course-enroll-form.component';
+import { HttpClientModule } from '@angular/common/http';
+import { GoogleSheetsDbService } from 'ng-google-sheets-db';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,13 @@ import { CourseEnrollFormComponent } from './course-enroll-form/course-enroll-fo
   ],
   imports: [
     AppRoutingModule,
+    HttpClientModule,
     BrowserModule.withServerTransition({ appId: 'esmartcoder' }),
     BrowserAnimationsModule,
     SharedModule
   ],
   entryComponents: [],
-  providers: [],
+  providers: [GoogleSheetsDbService],
   exports: [],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA]

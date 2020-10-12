@@ -14,57 +14,50 @@
             'sunny-morning-gradient': course.title === 'PYTHON',
             'night-fade-gradient': course.title === 'SPRING'
             }">
-          <h3 class="card-header-title mb-2">{{course.title1}}</h3>
-          <h5 class="card-header-title mb-2">{{course.title2}}</h5>
+          <h4 class="card-header-title">{{course.title1}}</h4>
+          <h5 class="card-header-title" style="color: black;">{{course.title2}}</h5>
           <br>
-          <h5 class="" style="color: black;">
             <strong>
               <mdb-icon far icon="calendar"></mdb-icon> {{course.date}} &nbsp;
               <mdb-icon far icon="clock"></mdb-icon> {{course.time}}
             </strong>
-          </h5>
           <br>
-          <div class="card-header-title mb-2" style="font-size: 18px;">
+          <div class="card-header-title mb-2" style="font-size: 18px; color: black;">
             Course Fee :
             &nbsp;<mdb-icon fas icon="rupee-sign"></mdb-icon>
             <span style="font-size: 22px;">
-              {{course.fee}}
+              {{course.discountFee}}
             </span>&nbsp;
             <span style="color: yellow;">
               <del>
-                <mdb-icon fas icon="rupee-sign"></mdb-icon>500
+                <mdb-icon fas icon="rupee-sign"></mdb-icon>{{course.actualFee}}
               </del>
             </span>
           </div>
         </div>
         <mdb-card-body cascade="true" class="text-center pb-0 px-0">
-          <button size="sm" style="cursor: crosshair" mdbBtn type="button" color="black" outline="true"
-            mdbWavesEffect>
-            <span style="font-size: 18px;color: red;">
-              {{course.availableSeats}} &nbsp; Seats Available
+          <button size="sm" style="cursor: crosshair" mdbBtn type="button" color="black" outline="true" mdbWavesEffect>
+            <span style="font-size: 16px;color: red;">
+              {{course.totalSeats}}
             </span>
           </button>
           <!-- <p>{{course.description}}</p> -->
-          <div>
-            <!--Facebook-->
+          <!-- <div>
             <a type="button" mdbBtn floating="true" size="sm" color="fb" class="waves-light" mdbWavesEffect>
               <mdb-icon fab icon="facebook"></mdb-icon>
             </a>
-            <!--Twitter-->
             <a type="button" mdbBtn floating="true" size="sm" color="tw" class="waves-light" mdbWavesEffect>
               <mdb-icon fab icon="twitter"></mdb-icon>
             </a>
-            <!--Google +-->
             <a type="button" mdbBtn floating="true" size="sm" color="blue" class="waves-light" mdbWavesEffect>
               <mdb-icon fab icon="linkedin"></mdb-icon>
             </a>
-            <!--Whats APP +-->
             <a type="button" mdbBtn floating="true" size="sm" color="success" class="waves-light" mdbWavesEffect>
               <mdb-icon fab icon="whatsapp"></mdb-icon>
             </a>
-          </div>
+          </div> -->
           
-          <button (click)="enrollCourse()" gradient="purple"  block="true" type="button" mdbBtn mdbWavesEffect [ngClass]="{
+          <button class="mt-2" (click)="enrollCourse()" gradient="purple"  block="true" type="button" mdbBtn mdbWavesEffect [ngClass]="{
               'peach-gradient': course.title === 'HTML',
               'purple-gradient': course.title === 'CSS',
               'spring-warmth-gradient': course.title === 'JAVASCRIPT',
@@ -74,21 +67,20 @@
               'sunny-morning-gradient': course.title === 'PYTHON',
               'night-fade-gradient': course.title === 'SPRING'
               }">
-            <span>
-              {{course.buttonText}}
+            <span style="font-size: 16px;">
+              <strong>{{course.buttonText}}</strong>
             </span>
           </button>
           <!-- Card footer -->
-          <div class="card-footer text-center mt-4">
-            {{course.totalSeats}} SEATS ALLOCATED
-          </div>
+          <!-- <div class="card-footer text-center">
+            {{course.totalSeats}} - SEATS ALLOCATED
+          </div> -->
 
         </mdb-card-body>
         <!--/.Card content-->
 
       </mdb-card>
       <!--/.Card-->
-
     </div>
   </mdb-carousel-item>
 </mdb-carousel>
