@@ -14,6 +14,11 @@ import { MainCoursesComponent } from './main-courses/main-courses.component';
 import { CourseEnrollFormComponent } from './course-enroll-form/course-enroll-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GoogleSheetsDbService } from 'ng-google-sheets-db';
+import { environment } from 'src/environments/environment';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +35,11 @@ import { GoogleSheetsDbService } from 'ng-google-sheets-db';
     HttpClientModule,
     BrowserModule.withServerTransition({ appId: 'esmartcoder' }),
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   entryComponents: [],
   providers: [GoogleSheetsDbService],

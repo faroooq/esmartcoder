@@ -91,3 +91,20 @@ Icons:
 https://www.flaticon.com/free-icons/kaaba
 
 https://tomastrajan.github.io/angular-ngrx-material-starter#/about
+
+
+https://stackblitz.com/edit/ng-gapi-example?file=app%2FSheetResource.ts
+
+https://stackoverflow.com/questions/38091215/import-gapi-auth2-in-angular-2-typescript
+
+https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/gapi.client.sheets
+
+https://developer.aliyun.com/mirror/npm/package/ng-gapi
+
+Google Console:
+==============
+https://console.developers.google.com/apis/credentials/oauthclient/674183746939-srnjni1afoilbf2l496jdqn6gv1o9p56.apps.googleusercontent.com?project=esmartcoder
+
+Firebase:
+=========
+https://github.com/muhammedessa/angular-6-firebase-CRUD-and-authentication/tree/master/src/app

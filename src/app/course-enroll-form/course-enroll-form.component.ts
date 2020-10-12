@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 
 @Component({
   selector: 'app-course-enroll-form',
@@ -9,64 +10,49 @@ import { Router } from '@angular/router';
 })
 export class CourseEnrollFormComponent implements OnInit {
 
-  exampleForm: FormGroup;
-
-  validation_messages = {
-    'firstName': [
-      { type: 'required', message: 'FirstName is required.' }
-    ],
-    'lastName': [
-      { type: 'required', message: 'LastName is required.' }
-    ],
-    'email': [
-      { type: 'required', message: 'Email is required.' },
-    ],
-    
-    'countryCode': [
-      { type: 'required', message: 'Country Code is required.' },
-    ],
-    'phone': [
-      { type: 'required', message: 'Phone is required.' },
-    ]
-  };
+  enrollForm: FormGroup;
+  userList: AngularFireList<any>;
 
   constructor(
-    private fb: FormBuilder,
     private router: Router,
-  ) { }
+    public db: AngularFireDatabase,
+    private formBuilder: FormBuilder
+  ) {
+    this.userList = db.list('users')
+  }
+
+  registerForm: FormGroup;
+  submitted = false;
 
   ngOnInit() {
-    this.createForm();
-  }
-
-  createForm() {
-    this.exampleForm = this.fb.group({
+    this.registerForm = this.formBuilder.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      email: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
       countryCode: ['', Validators.required],
       phone: ['', Validators.required]
+    }, {
     });
   }
 
-  resetFields() {
-    this.exampleForm = this.fb.group({
-      firstName: new FormControl('', Validators.required),
-      lastName: new FormControl('', Validators.required),
-      email: new FormControl('', Validators.required),
-      countryCode: new FormControl('', Validators.required),
-      phone: new FormControl('', Validators.required),
-    });
+  // convenience getter for easy access to form fields
+  get f() { return this.registerForm.controls; }
+
+  onSubmit() {
+    this.submitted = true;
+    // stop here if form is invalid
+    if (this.registerForm.invalid) {
+      return;
+    }
+    this.userList.push({
+      firstName: this.registerForm.value.firstName,
+      lastName: this.registerForm.value.lastName,
+      email: this.registerForm.value.email,
+      countryCode: this.registerForm.value.countryCode,
+      phone: this.registerForm.value.phone
+    })
+    this.router.navigate(['/'])
   }
 
-  onSubmit(value) {
-  //   this.firebaseService.createUser(value, this.avatarLink)
-  //     .then(
-  //       res => {
-  //         this.resetFields();
-  //         this.router.navigate(['/']);
-  //       }
-  //     )
-  }
 
 }

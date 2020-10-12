@@ -4,15 +4,15 @@
 
 export const environment = {
   production: false,
-  // firebaseConfig: {
-  //   apiKey: "AIzaSyAXTt1xsr1CubLTcb1lQaazJnVyveHTr3M",
-  //   authDomain: "esmartcoder.firebaseapp.com",
-  //   databaseURL: "https://esmartcoder.firebaseio.com",
-  //   projectId: "esmartcoder",
-  //   storageBucket: "esmartcoder.appspot.com",
-  //   messagingSenderId: "515582872483",
-  //   appId: "1:515582872483:web:a85e33d4e6ed37f12ca816"
-  // }
+  firebaseConfig: {
+    apiKey: "AIzaSyBgUBhvt2lSG1QlquJSHAhDJBMDdIWWdg8",
+    authDomain: "esmartcoder.firebaseapp.com",
+    databaseURL: "https://esmartcoder.firebaseio.com",
+    projectId: "esmartcoder",
+    storageBucket: "esmartcoder.appspot.com",
+    messagingSenderId: "674183746939",
+    appId: "1:674183746939:web:5099fa82babbb41f6359de"
+  },
   courses: {
     spreadsheetId: '1ZC_hB_LagM-qByeKTVEufDirFMKtxr-wplH_i0WFuKE',
     worksheetId: 1,
@@ -22,6 +22,9 @@ export const environment = {
     worksheetId: 2,
   }
 };
+
+// Client ID: 674183746939-srnjni1afoilbf2l496jdqn6gv1o9p56.apps.googleusercontent.com
+// Client Secret: MCZiT5WBjTa59ZbxqFbwfgVD
 
 /*
  * For easier debugging in development mode, you can import the following file
