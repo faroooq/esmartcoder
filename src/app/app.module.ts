@@ -18,6 +18,7 @@ import { environment } from 'src/environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { ToastModule } from 'ng-uikit-pro-standard';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
     SharedModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    ToastModule.forRoot(),
   ],
   entryComponents: [],
   providers: [GoogleSheetsDbService],

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastService } from 'ng-uikit-pro-standard';
 import { Observable, Subject } from 'rxjs';
 import { startWith, map } from 'rxjs/operators';
 
@@ -21,7 +22,8 @@ export class CourseEnrollFormComponent implements OnInit {
 
   constructor(
     private router: Router,
-    public db: AngularFireDatabase) {
+    public db: AngularFireDatabase,
+    private toastrService: ToastService) {
     this.userList = db.list('enrolled-students')
   }
 
@@ -49,7 +51,7 @@ export class CourseEnrollFormComponent implements OnInit {
   }
 
   onSubmit() {
-    this.userList.push({
+    const response = this.userList.push({
       firstName: this.registerForm.value.firstName,
       lastName: this.registerForm.value.lastName,
       email: this.registerForm.value.email,
@@ -58,7 +60,21 @@ export class CourseEnrollFormComponent implements OnInit {
       onetoone: this.registerForm.value.onetoone,
       subscription: this.registerForm.value.subscription
     })
-    this.router.navigate(['/'])
+    if(response != null) {
+      const options = { opacity: 1, extendedTimeOut: 10000  };
+      this.toastrService.success( '', 'You have successfully enrolled to ' + this.registerForm.value.course + ' course', options);
+      // this.userList = AngularFireList<any>
+      
+      this.registerForm = new FormGroup({
+        firstName: new FormControl(),
+        lastName: new FormControl(),
+        email: new FormControl(),
+        course: new FormControl(),
+        phone: new FormControl(),
+        onetoone: new FormControl(),
+        subscription: new FormControl()
+      });
+    }
   }
 
 
