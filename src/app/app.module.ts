@@ -15,10 +15,9 @@ import { CourseEnrollFormComponent } from './course-enroll-form/course-enroll-fo
 import { HttpClientModule } from '@angular/common/http';
 import { GoogleSheetsDbService } from 'ng-google-sheets-db';
 import { environment } from 'src/environments/environment';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireAuthModule } from 'angularfire2/auth';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 @NgModule({
   declarations: [
@@ -38,8 +37,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     SharedModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireDatabaseModule
   ],
   entryComponents: [],
   providers: [GoogleSheetsDbService],

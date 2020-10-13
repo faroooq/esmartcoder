@@ -85,6 +85,11 @@ Google Cloud Pricing:
 https://cloud.google.com/pricing/list
 https://firebase.google.com/pricing?authuser=0#blaze-calculator
 
+mdboostrap git login:
+===============
+https://git.mdbootstrap.com/
+user: reachfrq
+pwd: f@rooq6011
 
 Icons:
 ======
