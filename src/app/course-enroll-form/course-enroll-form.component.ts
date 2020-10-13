@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Observable, Subject } from 'rxjs';
+import { startWith, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-course-enroll-form',
@@ -10,46 +12,51 @@ import { Router } from '@angular/router';
 })
 export class CourseEnrollFormComponent implements OnInit {
 
-  enrollForm: FormGroup;
   userList: AngularFireList<any>;
+
+  results: Observable<string[]>;
+  data: any = ['Angular', 'React', 'Javascript', 'CSS', 'Html', 'Java', 'Python', 'Ionic'];
+
+  registerForm: FormGroup;
 
   constructor(
     private router: Router,
-    public db: AngularFireDatabase,
-    private formBuilder: FormBuilder
-  ) {
-    this.userList = db.list('users')
+    public db: AngularFireDatabase) {
+    this.userList = db.list('enrolled-students')
   }
-
-  registerForm: FormGroup;
-  submitted = false;
 
   ngOnInit() {
-    this.registerForm = this.formBuilder.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      countryCode: ['', Validators.required],
-      phone: ['', Validators.required]
-    }, {
+    this.registerForm = new FormGroup({
+      firstName: new FormControl(),
+      lastName: new FormControl(),
+      email: new FormControl(),
+      course: new FormControl(),
+      phone: new FormControl(),
+      onetoone: new FormControl(),
+      subscription: new FormControl()
     });
+
+    this.results = this.registerForm.controls.course.valueChanges
+      .pipe(
+        startWith('red'),
+        map((value: string) => this.filter(value))
+      );
   }
 
-  // convenience getter for easy access to form fields
-  get f() { return this.registerForm.controls; }
+  filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+    return this.data.filter((item: any) => item.toLowerCase().includes(filterValue));
+  }
 
   onSubmit() {
-    this.submitted = true;
-    // stop here if form is invalid
-    if (this.registerForm.invalid) {
-      return;
-    }
     this.userList.push({
       firstName: this.registerForm.value.firstName,
       lastName: this.registerForm.value.lastName,
       email: this.registerForm.value.email,
-      countryCode: this.registerForm.value.countryCode,
-      phone: this.registerForm.value.phone
+      course: this.registerForm.value.course,
+      phone: this.registerForm.value.phone,
+      onetoone: this.registerForm.value.onetoone,
+      subscription: this.registerForm.value.subscription
     })
     this.router.navigate(['/'])
   }

@@ -41,22 +41,6 @@
               {{course.totalSeats}}
             </span>
           </button>
-          <!-- <p>{{course.description}}</p> -->
-          <!-- <div>
-            <a type="button" mdbBtn floating="true" size="sm" color="fb" class="waves-light" mdbWavesEffect>
-              <mdb-icon fab icon="facebook"></mdb-icon>
-            </a>
-            <a type="button" mdbBtn floating="true" size="sm" color="tw" class="waves-light" mdbWavesEffect>
-              <mdb-icon fab icon="twitter"></mdb-icon>
-            </a>
-            <a type="button" mdbBtn floating="true" size="sm" color="blue" class="waves-light" mdbWavesEffect>
-              <mdb-icon fab icon="linkedin"></mdb-icon>
-            </a>
-            <a type="button" mdbBtn floating="true" size="sm" color="success" class="waves-light" mdbWavesEffect>
-              <mdb-icon fab icon="whatsapp"></mdb-icon>
-            </a>
-          </div> -->
-          
           <button class="mt-2" (click)="enrollCourse()" gradient="purple"  block="true" type="button" mdbBtn mdbWavesEffect [ngClass]="{
               'peach-gradient': course.title === 'HTML',
               'purple-gradient': course.title === 'CSS',

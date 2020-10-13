@@ -13,20 +13,6 @@
     "build:ssr": "ng build --prod && ng run esmartcoder:server:production",
     "prerender": "ng run esmartcoder:prerender"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ganatan/angular-example-ssr.git"
-  },
-  "author": {
-    "name": "danny",
-    "email": "dannyganatan@gmail.com",
-    "url": "https://www.ganatan.com/"
-  },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ganatan/angular-example-ssr/issues"
-  },
-  "homepage": "https://github.com/ganatan/angular-example-ssr#readme",
   "private": true,
   "dependencies": {
     "@angular/animations": "10.1.2",
@@ -43,6 +29,7 @@
     "@nguniversal/express-engine": "10.1.0",
     "@angular/flex-layout": "7.0.0-beta.19",
     "@angular/fire": "^6.0.2",
+    "@agm/core": "^1.0.0-beta.5",
     "bootstrap": "4.5.2",
     "chart.js": "^2.9.3",
     "easy-pie-chart": "2.1.x",
@@ -67,6 +54,7 @@
     "@types/node": "14.11.2",
     "@types/jasmine": "3.5.14",
     "@types/jasminewd2": "2.0.8",
+    "@angular/language-service": "~10.1.2",
     "codelyzer": "6.0.0",
     "jasmine-core": "3.6.0",
     "jasmine-spec-reporter": "6.0.0",

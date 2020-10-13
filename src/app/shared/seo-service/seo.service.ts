@@ -17,9 +17,9 @@ export class SeoService {
   }
 
   setDescription(description: string): SeoService {
-    // this.meta.addTag({ name: 'description', content: description });
-    // this.meta.updateTag({ name: 'twitter:description', content: description });
-    // this.meta.updateTag({ property: 'og:description', content: description });
+    this.meta.addTag({ name: 'description', content: description });
+    this.meta.updateTag({ name: 'twitter:description', content: description });
+    this.meta.updateTag({ property: 'og:description', content: description });
     return this;
   }
 

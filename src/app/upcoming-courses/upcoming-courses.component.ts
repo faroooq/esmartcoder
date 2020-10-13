@@ -25,13 +25,6 @@ export class UpcomingCoursesComponent implements OnInit {
     return R;
   }
   ngOnInit(): void {
-
-    // this.googleSheetsDbService.get<EnrollData>(
-    //   environment.enrollForm.spreadsheetId, environment.enrollForm.worksheetId, enrollAttributesMapping).subscribe(data => {
-    //     this.enrollData = data;
-    //   });
-    // console.log("Angular enroll data: " + this.enrollData.length)
-
     this.googleSheetsDbService.get<Courses>(
       environment.courses.spreadsheetId, environment.courses.worksheetId, coursesAttributesMapping).subscribe(data => {
         this.course = data;
