@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div mdbBtn color="success" class="waves-light" mdbWavesEffect>Success message</div>
 <!-- Material form contact -->
-<section class="pb-3 pt-10 text-center container" style="padding-top: 100px;">
+<section class="pb-3 pt-10 text-center container" style="padding-top: 50px;">
     <div class="row">
         <div class="col-lg-6 col-md-6 mb-3">
             <!--Card-->
@@ -49,7 +49,7 @@
                     </p>
                     <!-- <hr> -->
                     <div class="orange-text d-flex flex-row-reverse">
-                        <h5 class="waves-effect p-2" mdbWavesEffect>Enrollment Form
+                        <h5 class="waves-effect p-2" mdbWavesEffect>More Info
                             <mdb-icon fas icon="chevron-right"></mdb-icon>
                         </h5>
                     </div>
@@ -74,7 +74,7 @@
 
                 <mdb-card-body cascade="true" class="text-center">
                     <!--Card content-->
-                    <form [formGroup]="registerForm" style="padding: 5px;">
+                    <form [formGroup]="registerForm" style="padding: 10px;" (ngSubmit)="onSubmit()">
                         <div class="form-row mb-4">
                             <div class="col-6">
                                 <!-- First name -->
@@ -114,27 +114,36 @@
                         </small>
                         <div class="form-row">
                             <!-- Opt for 1 - 1 -->
-                            <div class="col-md-12 mx-auto d-flex mt-3">
-                                <mdb-checkbox formControlName="onetoone">Do you want to opt for 1 - 1 class with preferred Time?</mdb-checkbox>
+                            <div class="col-md-12 mx-auto d-flex mt-3" style="text-align: left;">
+                                <mdb-checkbox formControlName="onetoone">Do you want to opt for 1 - 1 class with
+                                    preferred Time?</mdb-checkbox>
                             </div>
                         </div>
-                        <button (click)="onSubmit()" class="mt-3 mb-3" mdbBtn gradient="purple" block="true"
-                            mdbWavesEffect>
-                            ENROLL NOW
+                        <button type="submit" class="mt-3 mb-3" mdbBtn gradient="purple" block="true"
+                            [disabled]="disabledSubmitButton" mdbWavesEffect>
+                            {{buttonValue}}
                         </button>
                         <div class="form-row">
-                            <div class="col-md-8 mx-auto d-flex">
+                            <div class="col-md-8 col-sm-9 mx-auto d-flex">
                                 <mdb-checkbox formControlName="subscription">Subscribe to our newsletter</mdb-checkbox>
                             </div>
-                            <div class="col-4">
-                                <p><a href="" target="_blank">Terms & Conditions</a></p>
+                            <div class="col-md-4 col-sm-3" style="text-align: right;">
+                                <small><a href="" target="_blank">Terms & Conditions</a></small>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="col-12">
-                                <p class="text-muted text-left">
-                                    <strong>Note:</strong> Once you enrolled We will contact you for further details.
-                                </p>
+                        <div class="form-row" style="text-align: left;">
+                            <div class="col-12 mt-2">
+                                <small class="text-muted">
+                                    <strong>Note:&nbsp;</strong> Once you have enrolled, We will contact you for further details.
+                                </small>
+                            </div>
+                        </div>
+                        <div class="form-row mt-3" style="text-align: left;">
+                            <div class="text-muted col-md-7 col-sm-6">
+                                <mdb-icon fas icon="envelope" class="mr-1"></mdb-icon><span>contact@esmartcoder.com</span>
+                            </div>
+                            <div class="text-muted col-md-5 col-sm-6">
+                                <mdb-icon fab icon="whatsapp" class="mr-1"></mdb-icon><span>+91 9014793628</span>
                             </div>
                         </div>
                     </form>
