@@ -4,88 +4,20 @@
 <div class="container mt-5">
 
     <!--Section heading-->
-    <h2 class="h1 py-5 font-weight-bold text-center">Why is it so great?</h2>
-    <!--Section description-->
-    <p class="px-5 mb-5 pb-3 lead grey-text text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-      sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam.</p>
-  
+    <h2 class="h1 py-5 font-weight-bold text-center">How it works?</h2>
+
     <!--Grid row-->
     <div class="row pt-2">
-  
-      <!--Grid column-->
-      <div class="col-lg-5 text-center text-lg-left">
-        <img src="https://mdbootstrap.com/img/Photos/Others/screens-section.jpg" alt="" class="img-fluid z-depth-0">
-      </div>
-      <!--Grid column-->
-  
-      <!--Grid column-->
-      <div class="col-lg-7">
-  
-        <!--Grid row-->
-        <div class="row pb-3">
-          <div class="col-2 col-md-1">
-            <mdb-icon fas icon="reply" size="lg" class="indigo-text"></mdb-icon>
-          </div>
-          <div class="col-10">
-            <h5 class="font-weight-bold text-left mb-3 dark-grey-text">Safety</h5>
-            <p class="grey-text text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Reprehenderit
-              maiores nam, aperiam minima assumenda
-              deleniti hic.</p>
-          </div>
-        </div>
-        <!--Grid row-->
-  
-        <!--Grid row-->
-        <div class="row pb-3">
-          <div class="col-2 col-md-1">
-            <mdb-icon fas icon="reply" size="lg" class="indigo-text"></mdb-icon>
-          </div>
-          <div class="col-10">
-            <h5 class="font-weight-bold text-left mb-3 dark-grey-text">Technology</h5>
-            <p class="grey-text text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Reprehenderit
-              maiores nam, aperiam minima assumenda
-              deleniti hic.</p>
-          </div>
-        </div>
-        <!--Grid row-->
-  
-        <!--Grid row-->
-        <div class="row pb-3">
-          <div class="col-2 col-md-1">
-            <mdb-icon fas icon="reply" size="lg" class="indigo-text"></mdb-icon>
-          </div>
-          <div class="col-10">
-            <h5 class="font-weight-bold text-left mb-3 dark-grey-text">Finance</h5>
-            <p class="grey-text text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Reprehenderit
-              maiores nam, aperiam minima assumenda
-              deleniti hic.</p>
-          </div>
-        </div>
-        <!--Grid row-->
-  
-      </div>
-      <!--Grid column-->
-  
-    </div>
-    <!--Grid row-->
-  
-</div>
-  <!--Section: Features v.3-->
-<!-- Material form contact -->
-<section class="pb-3 pt-2 text-center container">
-    <div class="row mt-5">
-        <div class="col-lg-6 col-md-6 mb-2">
+
+        <!--Grid column-->
+        <div class="col-lg-6 pb-5 text-center text-lg-left">
+
             <!--Card-->
             <mdb-card cascade="true">
 
                 <!--Card image-->
                 <div class="view view-cascade gradient-card-header purple-gradient">
-                    <h3 class="card-header-title">ENROLL COURSE</h3>
+                    <h3 class="card-header-title">BOOK A SESSION</h3>
                     <p>LOGIN / SIGN-IN NOT REQUIRED</p>
                 </div>
                 <!--/Card image-->
@@ -119,7 +51,7 @@
                             <div class="col-6" style="margin-top: 0px; margin-bottom: 0px;">
                                 <input formControlName="course" type="text"
                                     class="completer-input form-control mdb-autocomplete mb-0" [mdbAutoCompleter]="auto"
-                                    placeholder="Enter Course" />
+                                    placeholder="Enter service" />
                                 <mdb-auto-completer #auto="mdbAutoCompleter">
                                     <mdb-option *ngFor="let option of results | async" [value]="option">
                                         {{ option }}
@@ -152,13 +84,15 @@
                         <div class="form-row" style="text-align: left;">
                             <div class="col-12 mt-2">
                                 <small class="text-muted">
-                                    <strong>Note:&nbsp;</strong> Once you have enrolled, We will contact you for further details.
+                                    <strong>Note:&nbsp;</strong> Once you have enrolled, We will contact you for further
+                                    details.
                                 </small>
                             </div>
                         </div>
                         <div class="form-row mt-3" style="text-align: left;">
                             <div class="text-muted col-md-7 col-sm-6">
-                                <mdb-icon fas icon="envelope" class="mr-1"></mdb-icon><span>contact@esmartcoder.com</span>
+                                <mdb-icon fas icon="envelope" class="mr-1"></mdb-icon>
+                                <span>contact@esmartcoder.com</span>
                             </div>
                             <div class="text-muted col-md-5 col-sm-6">
                                 <mdb-icon fab icon="whatsapp" class="mr-1"></mdb-icon><span>+91 9014793628</span>
@@ -169,9 +103,80 @@
                 <!--/.Card content-->
             </mdb-card>
             <!--/.Card-->
+
+            <!-- Material form contact -->
         </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-6 mt-3">
+
+            <!--Grid row-->
+            <div class="row pb-2">
+                <div class="col-2 col-md-1">
+                    <mdb-icon fas icon="reply" size="lg" class="indigo-text"></mdb-icon>
+                </div>
+                <div class="col-10">
+                    <h5 class="font-weight-bold text-left mb-3 dark-grey-text">Flexible Timings</h5>
+                    <p class="grey-text text-left">Once you register the session, we will contact you for your timings to confirm a slot.</p>
+                </div>
+            </div>
+            <!--Grid row-->
+
+            <!--Grid row-->
+            <div class="row pb-2">
+                <div class="col-2 col-md-1">
+                    <mdb-icon fas icon="reply" size="lg" class="indigo-text"></mdb-icon>
+                </div>
+                <div class="col-10">
+                    <h5 class="font-weight-bold text-left mb-3 dark-grey-text">No Signup or Login Required</h5>
+                    <p class="grey-text text-left">We respect your privacy. If you don't subscibe to our news letter, We won't follow you.</p>
+                </div>
+            </div>
+            <!--Grid row-->
+
+            <!--Grid row-->
+            <div class="row pb-2">
+                <div class="col-2 col-md-1">
+                    <mdb-icon fas icon="reply" size="lg" class="indigo-text"></mdb-icon>
+                </div>
+                <div class="col-10">
+                    <h5 class="font-weight-bold text-left mb-3 dark-grey-text">Drop at any point of time.</h5>
+                    <p class="grey-text text-left">If you are not satisfied with our service, you can drop at any point of time. Pay the FEE only when you are completely satisfied with our service.</p>
+                </div>
+            </div>
+            <!--Grid row-->
+
+            <!--Grid row-->
+            <div class="row pb-2">
+                <div class="col-2 col-md-1">
+                    <mdb-icon fas icon="reply" size="lg" class="indigo-text"></mdb-icon>
+                </div>
+                <div class="col-10">
+                    <h5 class="font-weight-bold text-left mb-3 dark-grey-text">Interactive & Fun</h5>
+                    <p class="grey-text text-left">We made our sessions interactive and fun. All our classes are designed in an unique and experimental fashion.</p>
+                </div>
+            </div>
+            <!--Grid row-->
+
+            <!--Grid row-->
+            <div class="row pb-2">
+                <div class="col-2 col-md-1">
+                    <mdb-icon fas icon="reply" size="lg" class="indigo-text"></mdb-icon>
+                </div>
+                <div class="col-10">
+                    <h5 class="font-weight-bold text-left mb-3 dark-grey-text">Concept Learning</h5>
+                    <p class="grey-text text-left">We are the people of concept teaching. We sharpen and squeeze our minds according to your thoughts.</p>
+                </div>
+            </div>
+            <!--Grid row-->
+
+        </div>
+        <!--Grid column-->
 
     </div>
-</section>
-<!-- Material form contact -->
+    <!--Grid row-->
+
+</div>
+<!--Section: Features v.3-->
 <app-footer></app-footer>

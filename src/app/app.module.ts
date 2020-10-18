@@ -21,6 +21,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { ToastModule } from 'ng-uikit-pro-standard';
 import { BookSlotComponent } from './book-slot/book-slot.component';
 import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ContactComponent } from './contact/contact.component';
     SoftwareSolutionsComponent,
     CourseEnrollFormComponent,
     BookSlotComponent,
-    ContactComponent
+    ContactComponent,
+    AboutComponent
   ],
   imports: [
     AppRoutingModule,

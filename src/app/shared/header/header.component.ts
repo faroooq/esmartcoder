@@ -1,4 +1,5 @@
 import { Component, HostListener, ViewChild, Renderer2, AfterViewInit, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 import { NavbarComponent } from 'ng-uikit-pro-standard';
 
 @Component({
@@ -9,7 +10,9 @@ import { NavbarComponent } from 'ng-uikit-pro-standard';
 export class HeaderComponent implements AfterViewInit {
   @ViewChild('nav', { static: true }) nav: NavbarComponent;
 
-  constructor(private renderer: Renderer2, private el: ElementRef) { }
+  constructor(private renderer: Renderer2, 
+    private el: ElementRef,
+    private router: Router) { }
 
   transformDropdowns() {
     const dropdownMenu = Array.from(this.el.nativeElement.querySelectorAll('.dropdown-menu'));
@@ -44,6 +47,10 @@ export class HeaderComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.transformDropdowns();
+  }
+
+  goTo(value) {
+    this.router.navigateByUrl(value);
   }
 
 }

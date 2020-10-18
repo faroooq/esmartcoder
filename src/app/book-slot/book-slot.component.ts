@@ -15,7 +15,7 @@ export class BookSlotComponent implements OnInit {
 
   studentInfo: AngularFireList<any>;
   results: Observable<string[]>;
-  data: any = ['Angular', 'React', 'Javascript', 'CSS', 'Html', 'Java', 'Python', 'Ionic'];
+  data: any = ['Technology', 'Training', 'Workshop', 'Bugfix', 'Software', 'Guidance', 'Personality'];
   buttonValue: string = "Please fill all the details";
   registerForm: FormGroup;
   disabledSubmitButton: boolean = true;
@@ -24,7 +24,7 @@ export class BookSlotComponent implements OnInit {
 
     if (this.registerForm.valid) {
       this.disabledSubmitButton = false;
-      this.buttonValue = "Enroll NOW"
+      this.buttonValue = "Book NOW"
     }
   }
 
@@ -34,7 +34,7 @@ export class BookSlotComponent implements OnInit {
     private toastrService: ToastService,
     private fb: FormBuilder) {
 
-    this.studentInfo = db.list('enrolled-students')
+    this.studentInfo = db.list('book-slot')
 
     this.registerForm = fb.group({
       'firstName': ['', Validators.required],

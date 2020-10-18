@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { CourseEnrollFormComponent } from './course-enroll-form/course-enroll-form.component';
 import { BookSlotComponent } from './book-slot/book-slot.component';
 import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
 
 const appRoutes: Routes = [
   {
@@ -40,6 +41,16 @@ const appRoutes: Routes = [
   {
     path: 'contact',
     component: ContactComponent,
+    canActivate: [SeoGuard],
+    data: {
+      title: ['esmartcoder - Online Software Trainings'],
+      desc: 'We are a team of software engineers who are passionate about teaching technologies. We not only teach but also motivates the young to build their carriers and helps them to make their dreams come true.',
+      keywords: 'Online, Software, Training, Solutions, Mobile, Web, Courses, Projects, Coding, Kids'
+    }
+  },
+  {
+    path: 'about',
+    component: AboutComponent,
     canActivate: [SeoGuard],
     data: {
       title: ['esmartcoder - Online Software Trainings'],
