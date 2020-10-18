@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { SeoGuard } from './shared/seo-service/seo.guard';
 import { HomeComponent } from './home/home.component';
 import { CourseEnrollFormComponent } from './course-enroll-form/course-enroll-form.component';
+import { BookSlotComponent } from './book-slot/book-slot.component';
+import { ContactComponent } from './contact/contact.component';
 
 const appRoutes: Routes = [
   {
@@ -11,7 +13,7 @@ const appRoutes: Routes = [
     canActivate: [SeoGuard],
     data: {
       title: ['esmartcoder'],
-      desc: 'We are a team of software engineers with realtime experience in IT industry. We Love Teaching and Coding, more than that We Love to teach the students who are passionate about learning Technology.',
+      desc: 'We are a team of software engineers who are passionate about teaching technologies. We not only teach but also motivates the young to build their carriers and helps them to make their dreams come true.',
       keywords: 'Online, Software, Training, Solutions, Mobile, Web, Courses, Projects, Coding, Kids'
     }
   },
@@ -21,7 +23,27 @@ const appRoutes: Routes = [
     canActivate: [SeoGuard],
     data: {
       title: ['esmartcoder - Online Software Trainings'],
-      desc: 'We are a team of software engineers with realtime experience in IT industry. We Love Teaching and Coding, more than that We Love to teach the students who are passionate about learning Technology.',
+      desc: 'We are a team of software engineers who are passionate about teaching technologies. We not only teach but also motivates the young to build their carriers and helps them to make their dreams come true.',
+      keywords: 'Online, Software, Training, Solutions, Mobile, Web, Courses, Projects, Coding, Kids'
+    }
+  },
+  {
+    path: 'book-slot',
+    component: BookSlotComponent,
+    canActivate: [SeoGuard],
+    data: {
+      title: ['esmartcoder - Online Software Trainings'],
+      desc: 'We are a team of software engineers who are passionate about teaching technologies. We not only teach but also motivates the young to build their carriers and helps them to make their dreams come true.',
+      keywords: 'Online, Software, Training, Solutions, Mobile, Web, Courses, Projects, Coding, Kids'
+    }
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+    canActivate: [SeoGuard],
+    data: {
+      title: ['esmartcoder - Online Software Trainings'],
+      desc: 'We are a team of software engineers who are passionate about teaching technologies. We not only teach but also motivates the young to build their carriers and helps them to make their dreams come true.',
       keywords: 'Online, Software, Training, Solutions, Mobile, Web, Courses, Projects, Coding, Kids'
     }
   },

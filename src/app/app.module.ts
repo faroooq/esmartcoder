@@ -15,10 +15,12 @@ import { CourseEnrollFormComponent } from './course-enroll-form/course-enroll-fo
 import { HttpClientModule } from '@angular/common/http';
 import { GoogleSheetsDbService } from 'ng-google-sheets-db';
 import { environment } from 'src/environments/environment';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { ToastModule } from 'ng-uikit-pro-standard';
+import { BookSlotComponent } from './book-slot/book-slot.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ToastModule } from 'ng-uikit-pro-standard';
     UpcomingCoursesComponent,
     MainCoursesComponent,
     SoftwareSolutionsComponent,
-    CourseEnrollFormComponent
+    CourseEnrollFormComponent,
+    BookSlotComponent,
+    ContactComponent
   ],
   imports: [
     AppRoutingModule,
@@ -36,10 +40,11 @@ import { ToastModule } from 'ng-uikit-pro-standard';
     BrowserModule.withServerTransition({ appId: 'esmartcoder' }),
     BrowserAnimationsModule,
     SharedModule,
+    FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
-    ToastModule.forRoot(),
+    ToastModule.forRoot()
   ],
   entryComponents: [],
   providers: [GoogleSheetsDbService],

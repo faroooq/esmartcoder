@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { GoogleSheetsDbService } from 'ng-google-sheets-db';
 import { environment } from 'src/environments/environment';
@@ -7,7 +7,8 @@ import { Courses, coursesAttributesMapping } from './courses.model';
 @Component({
   selector: 'app-upcoming-courses',
   templateUrl: './upcoming-courses.component.html',
-  styleUrls: ['./upcoming-courses.component.scss']
+  styleUrls: ['./upcoming-courses.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class UpcomingCoursesComponent implements OnInit {
 
